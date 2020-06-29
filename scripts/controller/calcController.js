@@ -497,12 +497,11 @@ class calcController {
 
             let last
 
-            for(let i = this._operation.length -1; i>= 0; i--) {
-                if(this.isNumber(this._operation[i])) {
-                    last = this._operation[i].toString()
-                    break;
+            for(let index in this._operation) {
+                if(this.isNumber(this._operation[index])) {
+                    last = this._operation[index].toString()
                 }
-            }
+            }            
 
             this.displayCalc = last
 
